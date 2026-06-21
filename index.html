@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Taskmaster // To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="todo-container">
+        <div class="ambient-glow"></div>
+        
+        <div class="app-header">
+            <span class="sys-tag">// MANAGER CORE</span>
+            <h1>To-Do Hub</h1>
+        </div>
+
+        <form id="todoForm" class="todo-input-form">
+            <input type="hidden" id="editingTaskId" value="">
+            
+            <div class="input-row">
+                <input type="text" id="taskText" placeholder="What requires execution?..." required>
+            </div>
+            
+            <div class="meta-row">
+                <div class="datetime-group">
+                    <label for="taskDateTime">DEADLINE</label>
+                    <input type="datetime-local" id="taskDateTime" required>
+                </div>
+                <button type="submit" id="submitBtn" class="btn-add">Add Task ⚡</button>
+            </div>
+        </form>
+
+        <div class="filter-tabs">
+            <button class="tab-btn active" data-filter="all">All</button>
+            <button class="tab-btn" data-filter="pending">Pending</button>
+            <button class="tab-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="task-workspace">
+            <ul class="task-list" id="taskList">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
